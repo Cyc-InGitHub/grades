@@ -28,10 +28,11 @@ import until.StringSplit;
  */
 public class Ingar {
 	List<Integer> l = new ArrayList();
+	static Scanner s = new Scanner(System.in);
+	static List<Integer> a = new ArrayList();
 
 	public static void main(String[] args) {
-		List<Integer> a = new ArrayList();
-		Scanner s = new Scanner(System.in);
+
 		System.out.println("请选择默认成绩还是手动录入：1为默认，其余手动输入");
 		String type = "";
 		if (s.hasNext()) {
@@ -57,6 +58,10 @@ public class Ingar {
 
 			a = StringSplit.Integer(str1);
 		}
+		menu();
+	}
+
+	public static void menu() {
 
 		System.out.println("请选择要查看的项目 1 最高分 2 最低分 3 平均分 4 中值分数 5 成绩分布");
 
@@ -66,24 +71,24 @@ public class Ingar {
 		}
 		int tp = Integer.valueOf(p);
 		switch (tp) {
-			case 1:
-				Max.Integer(a);
-				break;
-			case 2:
-				Min.Integer(a);
-				break;
-			case 3:
-				Average.Integer(a);
-				break;
-			case 4:
-				Middle.Integer(a);
-				break;
-			case 5:
-				Calculate.Integer(a);
-				break;
-			default:
-				System.out.println("输入有误");
-				break;
+		case 1:
+			Max.Integer(a);
+			break;
+		case 2:
+			Min.Integer(a);
+			break;
+		case 3:
+			Average.Integer(a);
+			break;
+		case 4:
+			Middle.Integer(a);
+			break;
+		case 5:
+			Calculate.Integer(a);
+			break;
+		default:
+			System.out.println("输入有误");
+			break;
 		}
 		System.out.println("输入1继续查看，退出请随意按键");
 		String n = "";
@@ -92,36 +97,12 @@ public class Ingar {
 		}
 
 		if (n.equals("1")) {
-			System.out.println("请选择要查看的项目 1 最高分 2 最低分 3 平均分 4 中值分数 5 成绩分布");
-
-			String p1 = "";
-			if (s.hasNext()) {
-				p1 = s.next();
-			}
-			int tp1 = Integer.valueOf(p1);
-			switch (tp1) {
-				case 1:
-					Max.Integer(a);
-					break;
-				case 2:
-					Min.Integer(a);
-					break;
-				case 3:
-					Average.Integer(a);
-					break;
-				case 4:
-					Middle.Integer(a);
-					break;
-				case 5:
-					Calculate.Integer(a);
-					break;
-				default:
-					System.out.println("输入有误");
-					break;
-			}
+			menu();
 		} else {
+			System.out.println("系统退出");
 			return;
 		}
 
 	}
+
 }
