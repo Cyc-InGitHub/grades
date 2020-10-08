@@ -26,7 +26,7 @@ import until.StringSplit;
  * @author Cyc
  * @date 2020年10月7日
  */
-public class Ingar {
+public class Main {
 	List<Integer> l = new ArrayList();
 	static Scanner s = new Scanner(System.in);
 	static List<Integer> a = new ArrayList();
