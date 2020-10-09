@@ -38,7 +38,7 @@ public class Main {
 		if (s.hasNext()) {
 			type = s.next();
 		}
-		if (type.equals("1")) {
+		if ("1".equals(type)) {
 			a.add(20);
 			a.add(50);
 			a.add(70);
@@ -96,7 +96,7 @@ public class Main {
 			n = s.next();
 		}
 
-		if (n.equals("1")) {
+		if ("1".equals(n)) {
 			menu();
 		} else {
 			System.out.println("系统退出");
